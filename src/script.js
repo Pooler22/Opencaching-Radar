@@ -56,10 +56,3 @@ JSONHelper.loadJSON(
       console.error(xhr);
     }
 );
-
-// JSONHelper.loadJSON('okapi_base_url' + "services/apisrv/stats",
-//     (data) => {
-//       console.log(data);
-//     },
-//     (xhr) => console.error(xhr)
-// );
