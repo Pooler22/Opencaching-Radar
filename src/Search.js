@@ -10,20 +10,11 @@ import Checkbox from 'material-ui/Checkbox';
 import {Step, Stepper, StepLabel, StepContent} from 'material-ui/Stepper';
 import FlatButton from 'material-ui/FlatButton';
 
-const style = {
-    margin: 12
-};
-
 class Search extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     state = {
         value: 1,
         ns: false,
         we: false,
-        finished: false,
         stepIndex: 0
     };
 
@@ -31,7 +22,6 @@ class Search extends Component {
         const {stepIndex} = this.state;
         this.setState({
             stepIndex: stepIndex + 1,
-            finished: stepIndex >= 2
         });
     };
 
@@ -51,7 +41,7 @@ class Search extends Component {
             <div style={{
                 margin: '12px 0'
             }}>
-                {step == 0 && (<RaisedButton label={'Next'} disableTouchRipple={true} disableFocusRipple={true} primary={true} onTouchTap={this.handleNext} style={{
+                {step === 0 && (<RaisedButton label={'Next'} disableTouchRipple={true} disableFocusRipple={true} primary={true} onTouchTap={this.handleNext} style={{
                     marginRight: 12
                 }}/>)
 }
@@ -66,7 +56,7 @@ class Search extends Component {
     handleChangeWE = (event, index, we) => this.setState({we});
 
     render() {
-        const {finished, stepIndex} = this.state;
+        const {stepIndex} = this.state;
 
         return (
             <div className="App">
