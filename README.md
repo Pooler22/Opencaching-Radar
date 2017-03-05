@@ -13,12 +13,13 @@ A więc do dzieła!
 
 
 Linki:
-- Repozytorium: https://github.com/Pooler22/Opencaching-Radar
+- Bolg o aplikacji: https://iwanttodevelop.wordpress.com
+- Tablica z zadaniami: https://trello.com/b/uvk2LKXD
 - Geocaching: https://pl.wikipedia.org/wiki/Geocaching
 - Informacje o konkursie: http://dajsiepoznac.pl
 
 
-#DEVELOPER
+#For developers
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
