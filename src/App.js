@@ -5,7 +5,6 @@ import AppBar from 'material-ui/AppBar';
 import FlatButton from 'material-ui/FlatButton';
 
 import Home from './Home';
-import './App.css';
 import './script';
 
 class App extends Component {
@@ -17,7 +16,9 @@ class App extends Component {
     render() {
         return (
             <div>
-                <AppBar title="Opencache Radar" iconElementRight={< FlatButton label="Search" />}/> {this.props.children || <Home/>}
+                <AppBar
+                    title="Opencache Radar"
+                    iconElementRight={< FlatButton label = "Search" />}/> {this.props.children || <Home/>}
             </div>
         );
     }

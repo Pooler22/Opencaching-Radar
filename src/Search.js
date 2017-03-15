@@ -21,7 +21,7 @@ class Search extends Component {
     handleNext = () => {
         const {stepIndex} = this.state;
         this.setState({
-            stepIndex: stepIndex + 1,
+            stepIndex: stepIndex + 1
         });
     };
 
@@ -41,12 +41,23 @@ class Search extends Component {
             <div style={{
                 margin: '12px 0'
             }}>
-                {step === 0 && (<RaisedButton label={'Next'} disableTouchRipple={true} disableFocusRipple={true} primary={true} onTouchTap={this.handleNext} style={{
+                {step === 0 && (<RaisedButton
+                    label={'Next'}
+                    disableTouchRipple={true}
+                    disableFocusRipple={true}
+                    primary={true}
+                    onTouchTap={this.handleNext}
+                    style={{
                     marginRight: 12
                 }}/>)
 }
 
-                {step > 0 && (<FlatButton label="Back" disabled={stepIndex === 0} disableTouchRipple={true} disableFocusRipple={true} onTouchTap={this.handlePrev}/>)}
+                {step > 0 && (<FlatButton
+                    label="Back"
+                    disabled={stepIndex === 0}
+                    disableTouchRipple={true}
+                    disableFocusRipple={true}
+                    onTouchTap={this.handlePrev}/>)}
             </div>
         );
     }
@@ -82,34 +93,48 @@ class Search extends Component {
                         <StepLabel>Wprowadź dane i wyszukaj</StepLabel>
                         <StepContent>
                             <h1>Szukanie po nazwie</h1>
-                            <TextField hintText="Wpisz tu nazwę skrzynki..." floatingLabelText="Nazwa skrzynki"/>
+                            <TextField
+                                hintText="Wpisz tu nazwę skrzynki..."
+                                floatingLabelText="Nazwa skrzynki"/>
                             <br/>
                             <RaisedButton label="Szukaj"/>
                             <br/>
 
                             <h1>Szukanie po waypoint'cie</h1>
-                            <TextField hintText="Wpisz tu nazwę waypoint'a..." floatingLabelText="Nazwa waypoint'a"/>
+                            <TextField
+                                hintText="Wpisz tu nazwę waypoint'a..."
+                                floatingLabelText="Nazwa waypoint'a"/>
                             <br/>
                             <RaisedButton label="Szukaj"/>
                             <br/>
 
                             <h1>Szukanie po założycielu skrzynki</h1>
-                            <TextField hintText="Wpisz tu nazwę zalożyciela skrzynki..." floatingLabelText="Nazwa zalożyciela skrzynki"/>
+                            <TextField
+                                hintText="Wpisz tu nazwę zalożyciela skrzynki..."
+                                floatingLabelText="Nazwa zalożyciela skrzynki"/>
                             <br/>
                             <RaisedButton label="Szukaj"/>
                             <br/>
 
                             <h1>Szukanie po współrzędnych</h1>
-                            <TextField hintText="Wpisz tu nazwę skrzynki..." floatingLabelText="Nazwa skrzynki"/>
+                            <TextField
+                                hintText="Wpisz tu nazwę skrzynki..."
+                                floatingLabelText="Nazwa skrzynki"/>
                             <br/>
-                            <SelectField floatingLabelText="N/S" value={this.state.ns} onChange={this.handleChangeNS}>
+                            <SelectField
+                                floatingLabelText="N/S"
+                                value={this.state.ns}
+                                onChange={this.handleChangeNS}>
                                 <MenuItem value={false} primaryText="N"/>
                                 <MenuItem value={true} primaryText="S"/>
                             </SelectField>
                             <TextField hintText="00" floatingLabelText="00°"/>
                             <TextField hintText="00.000" floatingLabelText="00.000'"/>
                             <br/>
-                            <SelectField floatingLabelText="W/E" value={this.state.we} onChange={this.handleChangeWE}>
+                            <SelectField
+                                floatingLabelText="W/E"
+                                value={this.state.we}
+                                onChange={this.handleChangeWE}>
                                 <MenuItem value={false} primaryText="W"/>
                                 <MenuItem value={true} primaryText="E"/>
                             </SelectField>
@@ -129,7 +154,10 @@ class Search extends Component {
                             <h1>Szukanie po adresie</h1>
                             <TextField hintText="Wpisz tu adres..." floatingLabelText="Adres"/>
                             <br/>
-                            <SelectField floatingLabelText="Maksymalna odległość" value={this.state.value} onChange={this.handleChange}>
+                            <SelectField
+                                floatingLabelText="Maksymalna odległość"
+                                value={this.state.value}
+                                onChange={this.handleChange}>
                                 <MenuItem value={1} primaryText="1 km"/>
                                 <MenuItem value={3} primaryText="3 km"/>
                                 <MenuItem value={5} primaryText="5 km"/>
